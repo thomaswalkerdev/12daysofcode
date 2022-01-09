@@ -31,3 +31,30 @@ function getDistance(distance) {
 }
 
 console.log("position", verticalPosition * horizontalPosition);
+
+let horizontalPositionTwo = 0;
+let aim = 0;
+let depth = 0;
+
+//down increases aim by x
+//down decreases aim by x
+
+//forward increases horizontal position by x
+//forward increases your depth by your aim multiplied by X
+
+readInputFromFile().forEach((element) => {
+  switch (getDirection(element)) {
+    case "forward":
+      horizontalPositionTwo += getDistance(element);
+      depth += getDistance(element) * aim;
+      break;
+    case "up":
+      aim -= getDistance(element);
+      break;
+    case "down":
+      aim += getDistance(element);
+      break;
+  }
+});
+
+console.log("position", depth * horizontalPositionTwo);
