@@ -94,7 +94,13 @@ positionCounts.forEach((position, index) => {
   }
 });
 
-console.log("values", oxygenValue, co2Value, oxygenValue * co2Value, count);
+console.log(
+  "final values",
+  oxygenValue,
+  co2Value,
+  oxygenValue * co2Value,
+  count
+);
 
 const { input } = require("./input");
 
